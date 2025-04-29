@@ -1,29 +1,196 @@
-body {
-    font-family: sans-serif;
-    line-height: 1.6;
+/* style.css - Thiết kế giao diện cho Tân Thời YearBook */
+/* Chủ đạo: Màu xanh mint và trắng, font chữ Poppins, phong cách hiện đại, nhẹ nhàng */
+
+/* Định nghĩa các biến màu cho giao diện (sử dụng :root cho CSS variables) */
+:root {
+    --mint-light: #EFFBF0;  /* Màu xanh mint rất nhạt (gần trắng) để làm nền hoặc gradient */
+    --mint: #ADEBB3;        /* Màu xanh mint chủ đạo (pastel) */
+    --mint-dark: #2D8565;   /* Màu xanh mint đậm hơn để làm điểm nhấn (footer, nút, v.v.) */
+  }
+  
+  /* Reset cơ bản để loại bỏ margin/padding mặc định và thiết lập box-sizing */
+  * {
     margin: 0;
     padding: 0;
-    background: #fffdfc;
+    box-sizing: border-box;
   }
   
+  /* Thiết lập font chữ chung và màu chữ cho toàn trang */
+  html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;            /* Cỡ chữ cơ bản */
+    line-height: 1.6;           /* Giãn dòng cho dễ đọc */
+    scroll-behavior: smooth;    /* Cuộn mượt mà khi nhấn các liên kết nội bộ */
+  }
+  
+  body {
+    color: #333;                /* Màu chữ tối trên nền sáng để dễ đọc (chữ tối màu) */
+    background-color: #fff;     /* Nền trang màu trắng */
+  }
+  
+  /* Đảm bảo hình ảnh hiển thị tốt trong khung chứa (responsive images) */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* ===== Header ===== */
   header {
-    background: #ff86a1;
-    color: white;
-    padding: 40px 20px;
+    background: linear-gradient(to right, var(--mint-light), var(--mint));  /* Hình nền header: gradient từ xanh mint nhạt sang xanh mint */
+    color: #333;                 /* Màu chữ tối trên nền xanh mint nhạt để đảm bảo độ tương phản */
     text-align: center;
+    padding: 2rem 1rem;          /* Khoảng cách trong header (trên dưới 2rem, hai bên 1rem) */
+  }
+  header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  header p {
+    font-size: 1.125rem;
+    margin-bottom: 0;
   }
   
-  section {
-    padding: 20px;
-    margin: 20px;
-    background: #fefefe;
+  /* Nếu có thanh điều hướng (navigation menu) trong header */
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+  }
+  header nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);  /* Đổi nền hơi xám khi hover để làm nổi bật mục */
   }
   
-  footer {
-    background: #ddd;
-    padding: 10px;
+  /* ===== Sections (Nội dung chính) ===== */
+  section {
+    padding: 2rem 1rem;          /* Khoảng cách trong cho các phần nội dung */
+    background-color: #fff;      /* Nền trắng cho các section nội dung */
+    color: #333;                 /* Chữ màu tối trên nền trắng */
+  }
+  /* Tiêu đề và đoạn văn trong các section (có thể tùy chỉnh thêm nếu cần) */
+  section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
     text-align: center;
+  }
+  section p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Ví dụ về lớp .container để giới hạn độ rộng nội dung (sử dụng nếu cần) */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Lớp .flex để tạo bố cục linh hoạt theo hàng (sử dụng cho các nhóm cột nội dung) */
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  /* ===== Gallery ===== */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* Tự động chia cột ảnh, tối thiểu 200px mỗi ảnh */
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .gallery img {
+    border-radius: 8px;       /* Bo góc mềm mại cho ảnh */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Đổ bóng nhẹ quanh ảnh */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);   /* Phóng to nhẹ ảnh khi hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Tăng đổ bóng khi hover để ảnh nổi bật hơn */
+  }
+  
+  /* ===== Buttons (Các nút) ===== */
+  /* Định dạng chung cho nút <button> và các phần tử có class .btn */
+  button, .btn, input[type="button"], input[type="submit"], input[type="reset"] {
+    background-color: var(--mint-dark);   /* Màu nền xanh mint đậm */
+    color: #fff;                          /* Chữ màu trắng cho nút */
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;                   /* Bo góc mềm mại cho nút */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Đổ bóng nhẹ dưới nút */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  button:hover, .btn:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #276E55;           /* Màu nền tối hơn một chút khi hover (hiệu ứng nổi bật) */
+    transform: translateY(-2px);         /* Đẩy nút lên một chút khi hover (hiệu ứng nổi) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Tăng độ bóng để nút trông nổi hơn */
+  }
+  button:active, .btn:active, input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active {
+    transform: translateY(0);            /* Nút trở lại vị trí ban đầu khi bấm (active) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);   /* Bóng trở lại trạng thái ban đầu */
+  }
+  
+  /* ===== Links (Các liên kết) ===== */
+  a {
+    color: var(--mint-dark);    /* Màu liên kết sử dụng màu mint đậm để nổi bật trên nền trắng */
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline; /* Gạch chân liên kết khi hover để nhấn mạnh */
+  }
+  
+  /* ===== Footer ===== */
+  footer {
+    background-color: var(--mint-dark);  /* Nền footer màu xanh mint đậm hơn */
+    color: #fff;                         /* Chữ màu trắng trên nền footer */
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  footer p {
+    margin-bottom: 0.5rem;
+  }
+  footer a {
+    color: #fff;                        /* Liên kết trong footer có màu trắng */
+    text-decoration: none;
+    font-weight: 500;
+  }
+  footer a:hover {
+    text-decoration: underline;         /* Gạch chân liên kết trong footer khi hover */
+  }
+  
+  /* ===== Responsive Media Queries ===== */
+  /* Thiết lập responsive để giao diện hiển thị tốt trên thiết bị di động */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+    header nav ul {
+      flex-direction: column;    /* Menu chuyển sang xếp dọc trên mobile */
+      margin-top: 0.5rem;
+    }
+    header nav ul li {
+      margin: 0.5rem 0;
+    }
+    /* Nếu có các cột nội dung đặt trong .flex, chuyển sang xếp chồng dọc trên màn hình nhỏ */
+    .flex {
+      flex-direction: column;
+    }
   }
   
