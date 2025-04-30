@@ -1,95 +1,71 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tân Thời YearBook | Ghi Dấu Thanh Xuân</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2e0e6e6e4.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
+  <!-- HERO SECTION with background -->
   <header class="hero">
-    <div class="hero-content">
+    <div class="overlay"></div>
+    <div class="hero-content container">
       <h1>Tân Thời YearBook</h1>
       <p>Nâng tầm kỷ yếu - Lưu giữ thanh xuân</p>
       <a href="#contact" class="btn">Đặt lịch ngay</a>
+      <div class="scroll-down">
+        <span></span>
+      </div>
     </div>
   </header>
 
-  <section class="about">
-    <h2>Về Tân Thời YearBook</h2>
-    <p>Chúng tôi mang đến những bộ kỷ yếu tràn đầy cảm xúc, phong cách hiện đại, độc đáo và sáng tạo danh cho thế hệ GEN Z.</p>
+  <!-- GIỚI THIỆU -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>Về Tân Thời YearBook</h2>
+      <p>Chúng tôi chuyên cung cấp dịch vụ chụp ảnh kỷ yếu chuyên nghiệp, sáng tạo và đầy cảm xúc, giúp bạn ghi dấu thanh xuân một cách trọn vẹn.</p>
+    </div>
   </section>
 
-  <section class="services">
-    <h2>Gói Chụp Hình</h2>
-    <div class="service-items">
-      <div class="service">
-        <i class="fas fa-camera-retro"></i>
-        <h3>Gói Cơ Bản</h3>
-        <p>Chụp tại trường, 500.000đ/lớp</p>
-      </div>
-      <div class="service">
-        <i class="fas fa-user-graduate"></i>
-        <h3>Gói Concept Trendy</h3>
-        <p>Studio - Ngoại cảnh, 1.200.000đ/lớp</p>
-      </div>
-      <div class="service">
-        <i class="fas fa-star"></i>
-        <h3>Gói Premium</h3>
-        <p>Quay phim highlight + Album artbook, liên hệ báo giá</p>
+  <!-- ALBUM -->
+  <section id="albums" class="albums">
+    <div class="container">
+      <h2>Album nổi bật</h2>
+      <div class="album-grid">
+        <div class="album">
+          <img src="https://i.ibb.co/ZHdcMR4/album1.jpg" alt="Album 1">
+          <h3>Album Đại học K2021</h3>
+          <p>Hành trình thanh xuân không thể quên.</p>
+        </div>
+        <div class="album">
+          <img src="https://i.ibb.co/f8mmZf7/album2.jpg" alt="Album 2">
+          <h3>Album THPT Lê Quý Đôn</h3>
+          <p>Kỷ niệm tuổi học trò trong veo và rực rỡ.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="albums" id="albums">
-    <h2>Album Kỷ Yếu</h2>
-    <div class="album-grid">
-  
-      <!-- Album 12A3 -->
-      <div class="album">
-        <img src="https://i.ibb.co/FFpNwzs/z6555240542598-d3798c4a6021b895ebc1bbf1ea660694.jpg" alt="Album 12A3">
-        <h3>12A3 – THPT Tăng Bạt Hổ</h3>
-        <p>Concept: Đồng phục – Ngoại cảnh</p>
-      </div>
-  
-      <!-- Album K15 -->
-      <div class="album">
-        <img src="https://i.ibb.co/fYWTQGX/z6555240543644-2d1683502c316db18f2ed1448babfc01.jpg" alt="Album K15">
-        <h3>K15 – ĐH KHXH&NV</h3>
-        <p>Concept: Studio – Tân Thời YearBook</p>
-      </div>
-  
-      <!-- Album 12E -->
-      <div class="album">
-        <img src="https://via.placeholder.com/400x250" alt="Album 12E">
-        <h3>12 – THPT</h3>
-        <p>Concept: chưa có nghĩ ra á mom</p>
-      </div>
-  
-    </div>
-  </section>
-  
-<section class="gallery">
-    <h2>Khoảnh khắc tấm hồn</h2>
-    <div class="gallery-grid">
-      <img src="https://i.ibb.co/ffWTQGX/z6555240543644-2d1683502c316db18f2ed1448babfc01.jpg" alt="Khoảnh khắc nhóm 1">
-      <img src="https://via.placeholder.com/300x200" alt="Khoảnh khắc 2">
-      <img src="https://via.placeholder.com/300x200" alt="Khoảnh khắc 3">
+  <!-- LIÊN HỆ -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Liên hệ với chúng tôi</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Họ và tên" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Lời nhắn..." rows="5" required></textarea>
+        <button type="submit">Gửi lời nhắn</button>
+      </form>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <h2>Kết Nối Ngay</h2>
-    <p><i class="fas fa-phone"></i> 0909 xxx xxx</p>
-    <p><i class="fas fa-envelope"></i> tanthoi.yearbook@gmail.com</p>
-    <p><i class="fab fa-facebook"></i> <a href="https://facebook.com/tanthoi.yearbook" target="_blank">Fanpage Tân Thời YearBook</a></p>
-  </section>
-
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Tân Thời YearBook | Made with love for GEN Z</p>
+    <p>&copy; 2025 Tân Thời YearBook. All rights reserved.</p>
+    <p><a href="#contact">Liên hệ</a> | <a href="#">Facebook</a></p>
   </footer>
 
 </body>
