@@ -1,72 +1,69 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tân Thời YearBook | Ghi Dấu Thanh Xuân</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- HERO SECTION with background -->
+  <!-- HERO SECTION -->
   <header class="hero">
     <div class="overlay"></div>
     <div class="hero-content container">
-      <h1>Tân Thời YearBook</h1>
-      <p>Nâng tầm kỷ yếu - Lưu giữ thanh xuân</p>
-      <a href="#contact" class="btn">Đặt lịch ngay</a>
-      <div class="scroll-down">
-        <span></span>
-      </div>
+      <h1 class="hero-title">Tân Thời YearBook</h1>
+      <p class="hero-subtitle">Nơi thanh xuân được khắc họa bằng nét hiện đại, sắc cá tính và dấu ấn riêng</p>
+      <a href="#contact" class="btn primary-btn">Đặt lịch ngay</a>
     </div>
   </header>
 
-  <!-- GIỚI THIỆU -->
-  <section id="about" class="about">
+  <!-- SECTION: GIỚI THIỆU -->
+  <section id="about" class="section about">
     <div class="container">
-      <h2>Về Tân Thời YearBook</h2>
-      <p>Chúng tôi chuyên cung cấp dịch vụ chụp ảnh kỷ yếu chuyên nghiệp, sáng tạo và đầy cảm xúc, giúp bạn ghi dấu thanh xuân một cách trọn vẹn.</p>
+      <h2 class="section-title">Về Chúng Tôi</h2>
+      <p class="section-description">Tân Thời YearBook mang đến trải nghiệm chụp ảnh kỷ yếu đậm chất nghệ thuật, sáng tạo và cá nhân hóa cho từng lớp học.</p>
     </div>
   </section>
 
-  <!-- ALBUM -->
-  <section id="albums" class="albums">
+  <!-- SECTION: ALBUM MẪU -->
+  <section id="albums" class="section albums">
     <div class="container">
-      <h2>Album nổi bật</h2>
+      <h2 class="section-title">Album Mẫu</h2>
       <div class="album-grid">
-        <div class="album">
-          <img src="https://i.ibb.co/ZHdcMR4/album1.jpg" alt="Album 1">
-          <h3>Album Đại học K2021</h3>
-          <p>Hành trình thanh xuân không thể quên.</p>
+        <div class="album-card">
+          <img src="https://i.ibb.co/gJLctSg/hero-kyyeu.jpg" alt="Album 12A1">
+          <div class="album-content">
+            <h3>Album 12A1</h3>
+            <p>Phong cách hiện đại, năng động và cá tính riêng.</p>
+          </div>
         </div>
-        <div class="album">
-          <img src="https://i.ibb.co/f8mmZf7/album2.jpg" alt="Album 2">
-          <h3>Album THPT Lê Quý Đôn</h3>
-          <p>Kỷ niệm tuổi học trò trong veo và rực rỡ.</p>
+        <div class="album-card">
+          <img src="https://i.ibb.co/0C6H9Fv/album-2.jpg" alt="Album 12A5">
+          <div class="album-content">
+            <h3>Album 12A5</h3>
+            <p>Màu sắc nhẹ nhàng, concept thanh lịch và cảm xúc.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- LIÊN HỆ -->
-  <section id="contact" class="contact">
+  <!-- SECTION: LIÊN HỆ -->
+  <section id="contact" class="section contact">
     <div class="container">
-      <h2>Liên hệ với chúng tôi</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Họ và tên" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Lời nhắn..." rows="5" required></textarea>
-        <button type="submit">Gửi lời nhắn</button>
-      </form>
+      <h2 class="section-title">Liên Hệ Đặt Lịch</h2>
+      <p class="section-description">Gửi tin nhắn cho chúng tôi để nhận báo giá và tư vấn nhanh chóng nhất.</p>
+      <a href="https://m.me/tanthoiyearbook" class="btn secondary-btn">Nhắn Facebook</a>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Tân Thời YearBook. All rights reserved.</p>
-    <p><a href="#contact">Liên hệ</a> | <a href="#">Facebook</a></p>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Tân Thời YearBook. All rights reserved.</p>
+      <a href="#" class="back-to-top">Trở về đầu trang</a>
+    </div>
   </footer>
-
 </body>
 </html>
